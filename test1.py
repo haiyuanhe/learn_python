@@ -54,3 +54,31 @@ print sum
 
 #dic 和set
 #直接定义没有任何学习成本.
+dic = {'1':'lala','2':'hahah'}
+print dic['1']
+
+#直接能够插入. 爽 .
+dic[3]='233'
+print dic
+
+#in 的用法返回bool 类型
+print '1' in dic
+print 'lala' in dic 
+
+#通过get 实现 
+print dic.get('1')
+#同时能够直接赋予非空的值. 
+print dic.get('none','none');
+
+#key是不能变的.hash 变了就难找了. 
+set= set([1,1,1,13,2,4,5,2])
+print set
+set.add(124)
+print set
+
+
+#字符串的不可变性. 都是在内存中直接新创建.
+#replace 的例子. 
+str = 'hehaiyuan'
+print str.replace('a','?')
+print str
