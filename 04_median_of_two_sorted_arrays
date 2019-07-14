@@ -1,0 +1,75 @@
+import json
+
+#思路:
+#合并两个有序数组. 然后获得中位数
+class Solution(object):
+    def findMedianSortedArrays(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        """
+        num = list()
+        i = 0
+        j = 0
+        while i < len(nums1) and j < len(nums2):
+            if nums1[i] < nums2[j]:
+                num.append(nums1[i])
+                i = i + 1
+            else:
+                num.append(nums2[j])
+                j = j + 1
+
+        while i < len(nums1):
+            num.append(nums1[i])
+            i = i + 1
+
+        while j < len(nums2):
+            num.append(nums2[j])
+            j = j + 1
+
+        if len(num) % 2 == 0:
+            n1 = len(num) / 2
+            n2 = n1 - 1
+            return float(num[n1] + num[n2]) / 2
+        else:
+            # median = num/2  + len(num) %2
+            median = len(num) / 2
+            return num[median]
+
+
+
+def stringToIntegerList(input):
+    return json.loads(input)
+
+
+def doubleToString(input):
+    if input is None:
+        input = 0
+    return "%.5f" % input
+
+
+def main():
+    import sys
+    def readlines():
+        for line in sys.stdin:
+            yield line.strip('\n')
+
+    lines = readlines()
+    while True:
+        try:
+            line = lines.next()
+            nums1 = stringToIntegerList(line)
+            line = lines.next()
+            nums2 = stringToIntegerList(line)
+
+            ret = Solution().findMedianSortedArrays(nums1, nums2)
+
+            out = doubleToString(ret)
+            print out
+        except StopIteration:
+            break
+
+
+if __name__ == '__main__':
+    main()
