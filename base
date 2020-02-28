@@ -1,0 +1,60 @@
+#For循环:
+
+for letter in 'Python':
+for index in range(len(fruits)):
+for else for 结束的时候进入else
+
+
+#Set 部分:
+
+s = set()
+s.add("1")
+s.add("2")
+
+print s  # 1, 2
+
+是否含有
+x in set
+
+
+#其他
+没有 自增加
+j= j+1
+
+
+list 的方法:
+全部都需要记住!!!
+insert
+append
+pop
+1. pop  + index
+2. pop 顶点
+remove
+1. remove 根据值来.
+等等
+
+数组切片:
+1. nums[start:stop:step]
+   print nums[:3:]
+   print nums[3::]
+   print nums[::3]
+
+
+insert 用法 . 永远插头. 后面自己往后放.
+class Solution:
+    # 返回从尾部到头部的列表值序列，例如[1,2,3]
+    def printListFromTailToHead(self, listNode):
+        # write code here
+        l = []
+        head = listNode
+        while head:
+            l.insert(0, head.val)
+            head = head.next
+        return l
+
+
+交换两个数
+nums[i], nums[j] = nums[j], nums[i]
+
+从当前开始减少到0 结束
+for j in range(i - 1, -1, -1):
