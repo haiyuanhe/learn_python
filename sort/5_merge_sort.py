@@ -1,4 +1,9 @@
 class Solution(object):
+    def sort2(self, nums):
+        return []
+    def merge2(self, arr1, arr2):
+        return []
+
     def sort(self, nums):
         if len(nums) < 2:
             return nums
@@ -28,4 +33,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
+    n = list()
+    n.sort()
     print s.sort([3, 1, 2, 3, 4, 5, 6])
