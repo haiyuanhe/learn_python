@@ -58,3 +58,16 @@ nums[i], nums[j] = nums[j], nums[i]
 
 从当前开始减少到0 结束
 for j in range(i - 1, -1, -1):
+
+
+list 转 str
+str_convert = ''.join(list)
+str 转 list
+result = [character for character in string]
+
+
+[1,2,3,4] ---> 1234
+int(''.join([str(x) for x in a]))
+
+
+sort + lambada 表达式.进行对比.
