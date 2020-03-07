@@ -33,6 +33,10 @@ remove
 1. remove 根据值来.
 等等
 
+统计list 中出现的内容
+list.count(obj)
+
+
 数组切片:
 1. nums[start:stop:step]
    print nums[:3:]
@@ -60,6 +64,11 @@ nums[i], nums[j] = nums[j], nums[i]
 for j in range(i - 1, -1, -1):
 
 
+直接遍历 index + obj
+for i, v in enumerate(array, start=0):
+start=1  下标从1 开始数
+
+
 list 转 str
 str_convert = ''.join(list)
 str 转 list
@@ -71,3 +80,10 @@ int(''.join([str(x) for x in a]))
 
 
 sort + lambada 表达式.进行对比.
+
+
+翻转:
+list.reverse()
+lst3 = lst[::-1]
+lst1 = [i for i in reversed(lst)]
+lst2 = sorted(lst,reverse=True)
