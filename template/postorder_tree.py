@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+# https://www.acwing.com/blog/content/314/
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -9,20 +10,26 @@ class TreeNode:
 class Solution:
     def postorder_tree_recure(self, root):
         if root != None:
-            self.inorder_tree_recure(root.left)
-            self.inorder_tree_recure(root.right)
+            self.postorder_tree_recure(root.left)
+            self.postorder_tree_recure(root.right)
             print root.val
 
+    # 左右根 是 根右左的逆序.
     def postorder_tree(self, root):
+        result = []
         stack = []
-        node = root
-        while len(stack) > 0 or node is not None:
-            while node is not None:
-                stack.append(node)
-                node = node.left
-            node = stack.pop()
-            node = node.right
-            print node.val  # 访问node节点，如输出node的value
+
+        p = root
+        while len(stack) >0 or p !=None:
+            if p !=None:
+                stack.append(p)
+                result.append(p.val)
+                p = p.right
+            else:
+                p = stack.pop()
+                p = p.left
+
+        return result[::-1]
 
 if __name__ == '__main__':
     s = Solution()
@@ -35,6 +42,5 @@ if __name__ == '__main__':
     root.right = c
     c.right = d
 
-    print s.postorder_tree(root)
-    print "\n"
     print s.postorder_tree_recure(root)
+    print s.postorder_tree(root)

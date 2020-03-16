@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+# https://www.acwing.com/blog/content/314/
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -14,15 +15,20 @@ class Solution:
             self.inorder_tree_recure(root.right)
 
     def inorder_traverse(self, root):
+        result = []
         stack = []
-        node = root
-        while len(stack) > 0 or node is not None:
-            while node is not None:
-                stack.append(node)
-                node = node.left
-            node = stack.pop()
-            print node.val  # 访问node节点，如输出node的value
-            node = node.right
+        p = root
+
+        while len(stack) > 0 or p != None:
+            if p != None:
+                stack.append(root)
+                p = p.left
+            else:
+                p = stack.pop()
+                result.append(p.val)
+                p = p.right
+
+        return result
 
 
 if __name__ == '__main__':
