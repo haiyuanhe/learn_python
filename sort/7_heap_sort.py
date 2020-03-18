@@ -3,9 +3,11 @@ class Solution(object):
         left = 2 * index + 1
         right = 2 * index + 2
         largest = index
-        if left < size and nums[left] < nums[largest]:
+        # if left < size and nums[left] < nums[largest]:
+        if left < size and nums[left] > nums[largest]:
             largest = left
-        if right < size and nums[right] < nums[largest]:
+        # if right < size and nums[right] < nums[largest]:
+        if right < size and nums[right] > nums[largest]:
             largest = right
 
         if largest != index:
@@ -23,10 +25,10 @@ class Solution(object):
 
         for i in reversed(range(size / 2)):
             self.down(nums, size, i)
-        print nums
+        # print nums
 
         for i in reversed(range(size)):
-            print i
+            # print i
             nums[i], nums[0] = nums[0], nums[i]
             self.down(nums, i, 0)
         return nums
