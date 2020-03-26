@@ -33,6 +33,14 @@ remove
 1. remove 根据值来.
 等等
 
+队列:
+pop(0)
+append()
+
+栈
+pop() 最后
+append() 最后
+
 统计list 中出现的内容
 list.count(obj)
 
@@ -81,6 +89,11 @@ int(''.join([str(x) for x in a]))
 
 sort + lambada 表达式.进行对比.
 
+
+self.pathTmp = [False for i in range(n)]
+
+二维数组初始化:
+dp = [[0 for i in range(n)] for j in range(m)]
 
 翻转:
 list.reverse()
