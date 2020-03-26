@@ -1,0 +1,54 @@
+# -*- coding:utf-8 -*-
+# 暴力搜索 / 深度搜索
+# 1. 顺序, 就是枚举的顺序
+# 2. 回溯, 调用后, 要恢复现场
+# 3. 剪枝. 不必要的删掉 提前判断.
+
+
+# 1. 排列数字
+# 2. n-皇后 (同一行同一列 斜线 都不能放一个皇后)
+#     a. 遍历行  遍历列 放皇后, 同时判断
+#     b. 一个一个的放 / 不放, 遍历行列, 同时判断是否能够放入.
+# 这里有一个问题就是斜线的记录集要留意
+
+class Soluntion:
+    # 结果拼接
+    path = []
+    # 标记顺序是否使用
+    pathTmp = []
+
+    # 原始的数组
+    # u 当前index 位置
+    # path 传入 / 或者是外部变量也可以.
+    def dfs(self, n, u):
+        # 截止条件, 同时记录并返回
+        if u == len(n):
+            # 如果有需要可以加入一个外部的容器存储
+            print self.path
+            return
+        # 越界或者不合法状态
+        # 剪枝, 就是不符合直接踢掉
+
+        # 遍历开始
+        for i in range(len(n)):
+            # 如果没有被用, 就可以继续
+            if not self.pathTmp[i]:
+                self.pathTmp[i] = True
+                self.path.append(n[i])
+
+                self.dfs(n, u + 1)
+
+                # 恢复现场!
+                self.path.pop()
+                self.pathTmp[i] = False
+
+    def test(self, n):
+        self.pathTmp = [False for i in range(n + 1)]
+        n = range(1, n + 1)
+        self.dfs(n, 0)
+        return list
+
+
+if __name__ == '__main__':
+    s = Soluntion()
+    print s.test(4)
