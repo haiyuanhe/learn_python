@@ -1,4 +1,9 @@
 # -*- coding:utf-8 -*-
+
+# 栈的压入、弹出序列
+# stack  栈
+# 模拟一遍压入和弹出
+
 class Solution:
     def IsPopOrder(self, pushV, popV):
         if len(pushV) != len(popV):

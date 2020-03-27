@@ -1,4 +1,9 @@
 # -*- coding:utf-8 -*-
+
+# 把数组排成最小的数
+# 最小 数
+
+
 class Solution:
     # 思路一: 全部搞出来然后求最小.
     def PrintMinNumber(self, numbers):

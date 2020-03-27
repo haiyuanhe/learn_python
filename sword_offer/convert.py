@@ -6,6 +6,12 @@ class TreeNode:
         self.right = None
 
 
+# 二叉搜索树变成双向链表
+# 二叉树 转变 链表
+# 非递归先序遍历
+
+# 非递归先序遍历, 找到最左边的点作为头 然后开始连接
+
 class Solution:
     def Convert(self, pRootOfTree):
         if pRootOfTree is None:

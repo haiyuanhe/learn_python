@@ -6,28 +6,32 @@ class TreeNode:
         self.right = None
 
 
+# 二叉树中和为某一值的路径
+# 二叉树 数字和 路径
+
+# 先序遍历, 同时将数值 变化, 记得要恢复现场.
 class Solution:
+    result = []
 
-    def FindPath(self, root, expectNumber):
-        result = list()
-        nums = list()
+    def find_path(self, root, sum):
+        path = []
+        self.dfs(root, sum, path)
+        return self.result
 
-        def find_one_path(root, expectNumber):
-            if root is None:
-                return nums
-
-            nums.append(root.val)
-            expectNumber -= root.val
-            if expectNumber == 0 and root.left is None and root.right is None:
-                a = []
-                a.extend(nums)
-                result.append(a)
-            find_one_path(root.left, expectNumber)
-            find_one_path(root.right, expectNumber)
-            nums.pop()
-            return result
-
-        return find_one_path(root, expectNumber)
+    def dfs(self, root, sum, path):
+        if root is None:
+            return
+        path.append(root.val)
+        sum = sum - root.val
+        # 到叶子节点才算
+        if sum == 0 and root.left is None and root.right is None:
+            tmp = []
+            tmp.extend(path)
+            self.result.append(tmp)
+        self.dfs(root.left, sum, path)
+        self.dfs(root.right, sum, path)
+        sum = sum + root.val
+        path.pop()
 
 
 if __name__ == '__main__':
@@ -41,4 +45,4 @@ if __name__ == '__main__':
     root.right = c
     c.right = d
 
-    print s.FindPath(root, 3)
+    print s.find_path(root, 5)

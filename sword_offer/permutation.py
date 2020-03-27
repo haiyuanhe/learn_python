@@ -1,6 +1,10 @@
 # -*- coding:utf-8 -*-
 
 
+# 数字排列
+# dfs
+# 交换
+
 class Solution:
     def Permutation(self, ss):
         if ss is None or len(ss) == 0:

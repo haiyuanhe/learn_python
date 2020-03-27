@@ -1,4 +1,8 @@
 # -*- coding:utf-8 -*-
+
+# 从1到n整数中1出现的次数
+# 数值计算
+
 class Solution:
     def NumberOf1Between1AndN_Solution(self, n):
         # write code here

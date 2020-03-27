@@ -6,6 +6,11 @@ class TreeNode:
         self.right = None
 
 
+# 二叉树的镜像
+# 二叉树
+# 镜像
+# 旋转
+
 class Solution:
     # 返回镜像树的根节点
     def Mirror(self, root):
