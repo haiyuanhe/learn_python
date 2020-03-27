@@ -6,17 +6,23 @@ class TreeNode:
         self.right = None
 
 
+# 树的子结构
+# 是否为子树
+
 class Solution:
     def HasSubtree(self, pRoot1, pRoot2):
-        # write code here
         if not pRoot1 or not pRoot2:
             return False
-        return self.is_subtree(pRoot1, pRoot2) or self.HasSubtree(pRoot1.left, pRoot2) or self.HasSubtree(pRoot1.right,
-                                                                                                          pRoot2)
+        if self.is_subtree(pRoot1, pRoot2):
+            return True
+        return self.HasSubtree(pRoot1.left, pRoot2) or self.HasSubtree(pRoot1.right,
+                                                                       pRoot2)
 
     def is_subtree(self, A, B):
+        # B 已经判断完了
         if not B:
             return True
+        # A还有, 但是A不等于B 的时候就返回false
         if not A or A.val != B.val:
             return False
         return self.is_subtree(A.left, B.left) and self.is_subtree(A.right, B.right)

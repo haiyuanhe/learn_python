@@ -6,6 +6,10 @@ class RandomListNode:
         self.random = None
 
 
+# 复杂链表的复制
+# 链表
+# 复制
+
 # 解题思路：
 # 1.遍历链表，复制每个结点，如复制结点A得到A1，将结点A1插到结点A后面；
 # 2.重新遍历链表，复制老结点的随机指针给新结点，如A1.random = A.random.next;

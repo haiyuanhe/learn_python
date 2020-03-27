@@ -4,6 +4,8 @@ class ListNode:
         self.val = x
         self.next = None
 
+#翻转链表
+#翻转k 链表
 
 class Solution(object):
     def reversed_linked_list(self, pHead):

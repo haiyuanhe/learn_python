@@ -4,6 +4,9 @@ class ListNode:
         self.val = x
         self.next = None
 
+#合并两个排序链表
+#合并
+#链表
 
 class Solution:
     def merge(self, pHead1, pHead2):

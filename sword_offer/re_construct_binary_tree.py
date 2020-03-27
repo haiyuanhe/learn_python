@@ -6,6 +6,9 @@ class TreeNode:
         self.right = None
 
 
+# 重建二叉树
+# 先序遍历 + 中序遍历
+
 class Solution:
     # 根据前序遍历确定头结点.
     # 根据头结点确定 中序遍历中的  左右树

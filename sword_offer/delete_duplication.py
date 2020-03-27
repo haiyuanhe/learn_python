@@ -5,6 +5,12 @@ class ListNode:
         self.next = None
 
 
+# 删除链表中重复的节点
+# 重复
+# 删除
+# 链表
+
+# 有序链表中删除即可
 class Solution:
     def deleteDuplication(self, pHead):
         result = ListNode(0)
