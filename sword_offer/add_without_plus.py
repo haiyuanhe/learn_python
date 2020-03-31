@@ -1,4 +1,7 @@
 # -*- coding:utf-8 -*-
+# 不用加减乘除做加法
+# 加法
+
 class Solution:
     def Add(self, num1, num2):
         while num2 != 0:

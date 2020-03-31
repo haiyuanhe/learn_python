@@ -5,12 +5,14 @@ class TreeNode:
         self.left = None
         self.right = None
 
+# 二叉树的深度
+# 递归求最高
 
 class Solution:
     def TreeDepth(self, pRoot, i=0):
         if pRoot is None:
             return i
-        i = i+1
+        i = i + 1
         return max(self.TreeDepth(pRoot.left, i), self.TreeDepth(pRoot.right, i))
 
 

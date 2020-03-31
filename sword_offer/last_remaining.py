@@ -1,4 +1,7 @@
 # -*- coding:utf-8 -*-
+
+# 圆圈中最后剩下的数字
+# 求余
 class Solution:
     def LastRemaining_Solution(self, n, m):
         p = range(0, n)

@@ -5,9 +5,9 @@ class TreeNode:
         self.left = None
         self.right = None
 
+# 判断是否为平衡二叉树
+# 深度差不超过一
 
-# 平衡二叉树  和搜索二叉树 不是一个东西.
-# 平衡是深度相同.
 class Solution:
     def IsBalanced_Solution(self, pRoot):
         # write code here
