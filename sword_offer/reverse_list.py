@@ -4,8 +4,9 @@ class ListNode:
         self.val = x
         self.next = None
 
-#翻转链表
-#链表
+
+# 翻转链表
+# 链表
 
 class Solution:
     # 返回ListNode

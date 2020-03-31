@@ -6,7 +6,7 @@ class TreeNode:
         self.right = None
 
 
-#平衡二叉树  和搜索二叉树 不是一个东西.
+# 平衡二叉树  和搜索二叉树 不是一个东西.
 # 平衡是深度相同.
 class Solution:
     def IsBalanced_Solution(self, pRoot):

@@ -4,6 +4,8 @@ class ListNode:
         self.val = x
         self.next = None
 
+# 链表有环
+# 快慢指针
 
 class Solution:
     def EntryNodeOfLoop(self, pHead):

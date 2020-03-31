@@ -1,6 +1,7 @@
 count = 0
 
-#不太懂这个题目的意思..
+
+# 不太懂这个题目的意思..
 class Solution:
     def InversePairs(self, data):
         global count
@@ -32,4 +33,4 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    print s.InversePairs([1,2,3,4,5,6,7,0])
+    print s.InversePairs([1, 2, 3, 4, 5, 6, 7, 0])

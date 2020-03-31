@@ -5,6 +5,11 @@ class ListNode:
         self.next = None
 
 
+# 两个链表的第一个公共结点
+# p1 节点走a 走完之后走 p2 的长度 那么 p1 = a+b
+# p2 节点走b 走完之后走 p1 的长度 那么 p2 = b+a
+# 如果有公共节点那么就会出现 a+b = b+a
+
 class Solution:
     def FindFirstCommonNode(self, pHead1, pHead2):
         p1 = pHead1

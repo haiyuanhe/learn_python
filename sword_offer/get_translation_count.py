@@ -4,7 +4,6 @@
 # 0翻译成”a”，1翻译成”b”，……，11翻译成”l”，……，25翻译成”z”。
 # 12258 ”bccfi”、”bwfi”、”bczi”、”mcfi”和”mzi”
 
-#
 class Solution:
     def getTranslationCount(self, s):
         if not s:

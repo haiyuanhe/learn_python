@@ -1,4 +1,11 @@
 # -*- coding:utf-8 -*-
+
+
+# 数字在排序数组中出现的次数
+# 有序数组
+# 二分
+# 终极二分将 数字  +0.5 -0.5 来找到 index 位置, 然后相减瞬间解决
+
 class Solution:
     def GetNumberOfK(self, data, k):
         # 直接api
